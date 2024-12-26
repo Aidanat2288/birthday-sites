@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: "Dancing Script", cursive;
+            background: linear-gradient(180deg, #A3C9E2, #B8D6E8); /* Пастельные оттенки синего и голубого */
+            overflow-x: hidden;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .photo {
+            margin: 10px auto;
+            max-width: 15%;
+            height: auto;
+            border-radius: 15px;
+            border: 5px solid #6A0DAD; /* Фиолетовая рамка */
+            background: url('https://www.transparenttextures.com/patterns/diagonal-hatch.png'); /* Узоры на рамке */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .photo:hover {
+            transform: scale(1.1);
+        }
+        .text {
+            font-size: 2rem;
+            color: #0047AB;
+            margin: 10px 20px;
+            animation: typewriter 3s steps(30) 1 normal both, blink 0.5s step-end infinite alternate;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #0047AB;
+            display: inline-block;
+        }
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            from { border-right-color: #0047AB; }
+            to { border-right-color: transparent; }
+        }
+        .button {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            color: #fff;
+            background-color: #FF5733;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #FF6F61;
+            transform: scale(1.1);
+        }
+        .birthday-details {
+            font-size: 1.5rem;
+            color: #2E4053;
+            margin: 15px 0;
+            animation: fadeInUp 2s ease-in-out;
+        }
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            background-image: url('confetti.png');
+            background-size: cover;
+            animation: confettiAnimation 10s linear infinite;
+        }
+        .balloons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .balloon {
+            width: 50px;
+            height: 70px;
+            position: absolute;
+            background-color: rgba(173, 216, 230, 0.9);
+            border-radius: 50%;
+            animation: float 6s linear infinite;
+        }
+        @keyframes float {
+            from {
+                transform: translateY(100vh);
+            }
+            to {
+                transform: translateY(-10vh);
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .timer {
+            font-size: 2.5rem;
+            color: #FF5733;
+            margin: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .fireworks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: url('fireworks.gif');
+            background-size: cover;
+            z-index: -2;
+            animation: fadeIn 3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="fireworks"></div>
+    <div class="confetti"></div>
+    <div class="balloons">
+        <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="balloon" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="balloon" style="left: 50%; animation-delay: 1s;"></div>
+        <div class="balloon" style="left: 70%; animation-delay: 3s;"></div>
+        <div class="balloon" style="left: 90%; animation-delay: 4s;"></div>
+    </div>
+
+    <div class="container">
+        <h1 style="color: #FF5733; animation: fadeIn 2s;">С Днем Рождения!</h1>
+
+        <p class="birthday-details">27 декабря — день, когда мир стал лучше, потому что в этот день родился ты!</p>
+
+        <p class="text">Хорошо проведи этот день</p>
+
+        <img src="img/photo1.jpg" alt="Фото 1" class="photo">
+        <p class="text">Твоя улыбка делает мир лучше!</p>
+
+        <img src="img/photo2.jpg" alt="Фото 2" class="photo">
+        <p class="text">Каждый миг рядом с тобой — подарок!</p>
+
+        <img src="img/photo3.jpg" alt="Фото 3" class="photo">
+        <p class="text">Миу любимка:3</p>
+
+        <img src="img/photo4.jpg" alt="Фото 4" class="photo">
+        <p class="text">Желаю миу счастья на многие года вперед!</p>
+
+        <img src="img/gif1.gif" alt="Анимация" class="photo">
+        <p class="text">И многоо деняг!</p>
+
+        <a href="https://youtu.be/8ScAnaU0FFE?si=9nXk1prZg4cQRGXy" class="button">Нажми, чтобы получить поцелуйчики</a>
+
+        <p class="birthday-details">Ты невероятный! И я горжусь, что могу быть рядом с тобой. Пусть этот год принесёт тебе ещё больше счастья, новых открытий и незабываемых моментов.
+					</p>
+		<p class="birthday-details">  
+					Создано бубу специально для дуду:3</p>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const birthday = new Date('2024-12-27T00:00:00');
+            const now = new Date();
+            const diff = birthday - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').textContent = `${days} дней ${hours} часов ${minutes} минут ${seconds} секунд`;
+
+            if (diff < 0) {
+                document.getElementById('countdown').textContent = "С Днем Рождения!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
